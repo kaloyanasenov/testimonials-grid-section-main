@@ -22,25 +22,32 @@ head {
 
     --fw-500: 500;
     --fw-600: 600;
+    --padding: 2.5rem
 }
 
 p {
     font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: var(--fw-500);
+    line-height: 1.4;
 }
 
+
+
+
+/* grid */
 @media (min-width: 600px) {
     body {
         min-height: 100vh;
         display: grid;
         place-content: center;
-        margin-inline: 20rem;
-        background-color:
+        margin-inline: 18.75rem;
+        background-color: #f5f5f5;
     }
 
     .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     gap: 1.5rem;
     
     }
@@ -49,15 +56,17 @@ p {
     grid-area: 1 / 1 / 2 / 3;
     background-color: var(--primary_clr-dark);
     border-radius: 1rem;
-    padding: 2rem;
+    padding: var(--padding);
     box-shadow: 3rem 5rem 3rem lightgrey;
+
+    
     }
 
     .box2 {
         grid-area: 1 / 3 / 2 / 4;
-        background-color: var(--grey-400);
+        background-color: var(--grey-500);
         border-radius: 1rem;
-        padding: 2rem;
+        padding: var(--padding);
         box-shadow: 3rem 5rem 3rem lightgrey;
     }
 
@@ -65,15 +74,15 @@ p {
         grid-area: 2 / 1 / 3 / 2;
         background-color: var(--white);
         border-radius: 1rem;
-        padding: 2rem;
-        box-shadow: 3rem 5rem 3rem lightgrey;
+        padding: var(--padding);
+        box-shadow: 5rem 5rem 5rem lightgrey;
     }
 
     .box4 {
         grid-area: 2 / 2 / 3 / 4;
-        background-color: var(--grey-500);
+        background-color: var(--darkblue);
         border-radius: 1rem;
-        padding: 2rem;
+        padding: var(--padding);
         box-shadow: 3rem 5rem 3rem lightgrey;
     }
 
@@ -81,8 +90,8 @@ p {
         grid-area: 1 / 4 / 3 / 4;
         background-color: var(--white);
         border-radius: 1rem;
-        padding: 2rem;
-        box-shadow: 3rem 5rem 3rem lightgrey;
+        padding: var(--padding);
+        box-shadow: 5rem 5rem 5rem lightgrey;
     }
 }
 
@@ -90,8 +99,10 @@ p {
     .grid {
     display: grid;
     grid-template-columns: 1fr ;
-    grid-template-rows: repeat(8, 1fr);
+    /* grid-template-rows: repeat(8, 1fr); */
     gap: 1.5rem;
+    margin: 1rem;
+    background-color: #f5f5f5;
     }
 
     .box1 {
@@ -103,7 +114,7 @@ p {
 
     .box2 {
         grid-area: 3 / 1 / 4 / 2;
-        background-color: var(--grey-400);
+        background-color: var(--grey-500);
         border-radius: 1rem;
         padding: 2rem;
     }
@@ -117,7 +128,7 @@ p {
 
     .box4 {
         grid-area: 5 / 1 / 7 / 2;
-        background-color: var(--grey-500);
+        background-color: var(--darkblue);
         border-radius: 1rem;
         padding: 2rem;
     }
@@ -136,7 +147,7 @@ p {
     grid-template-columns: 3rem 1fr;
     grid-template-rows: 1fr;
     align-items: center;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
 }
 
 .profile_img {
@@ -146,3 +157,81 @@ p {
     border: 2px solid var(--primary_clr-light);
     
 }
+
+
+/* font colors */
+
+
+
+.box1 > p,
+.box2 > p {
+    color: var(--grey-200);
+    font-size: 1rem;
+}
+
+.box1 > .highlight,
+.box2 > .highlight {
+    color: var(--grey-100);
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.img_bio > .bio {
+    font-size: .9rem;
+}
+
+.box1 > .img_bio > .bio > p ,
+.box2 > .img_bio > .bio > p {
+    color: var(--grey-200);
+}
+
+
+
+.box3 > p,
+.box5 > p {
+    color: var(--grey-400);
+    font-size: 1rem;
+}
+
+.box3 > .highlight,
+.box5 > .highlight {
+    color: var(--grey-500);
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+
+.box3 > .img_bio > .bio > p ,
+.box5 > .img_bio > .bio > p {
+    color: var(--grey-400);
+}
+
+
+
+
+.box4 > p {
+    color: var(--grey-200);
+    font-size: 1rem;
+}
+
+
+.box4 > .highlight {
+    color: var(--grey-200);
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+
+
+.box4 > .img_bio > .bio > p {
+    color: var(--grey-200);
+}
+
+
+/* background quote img attempt */
+/* .box1 .cite {
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    margin-left: 20%;
+    margin-bottom: 50%;
+} */
